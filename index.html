@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smooth Scrolling Demo</title>
+  <title>Smooth Scrolling with Color Change</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
     .section {
@@ -19,7 +20,7 @@
       color: white;
       font-size: 3rem;
       text-align: center;
-      padding: 20px;
+      transition: background-color 1s ease; /* Smooth transition for color change */
     }
 
     .section-1 { background: #3498db; }
@@ -59,11 +60,11 @@
   </style>
 </head>
 <body>
-  <div class="section section-1">
+  <div class="section section-1" id="section1">
     <div>Section 1</div>
     <a href="#section2"><button class="scroll-btn">Scroll Down</button></a>
   </div>
-  
+
   <div class="section section-2" id="section2">
     <div>Section 2</div>
     <a href="#section3"><button class="scroll-btn">Scroll Down</button></a>
@@ -77,5 +78,20 @@
   <div class="section section-4" id="section4">
     <div>Section 4</div>
   </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('.section');
+      const scrollPosition = window.scrollY + window.innerHeight;
+
+      sections.forEach((section, index) => {
+        if (scrollPosition > section.offsetTop) {
+          // Change the background color based on scroll position
+          const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12'];
+          section.style.backgroundColor = colors[index];
+        }
+      });
+    });
+  </script>
 </body>
 </html>
