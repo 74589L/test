@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #d1fae5;
+            color: #06b6d4; /* Teal/cyan default text color */
             background: #0f172a;
             line-height: 1.6;
             overflow-x: hidden;
@@ -26,7 +26,18 @@
             justify-content: center;
             padding: 4rem 2rem;
             position: relative;
-            transition: all 0.5s ease;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/1HTZErG.png') center/cover no-repeat;
+            background-attachment: fixed;
+            filter: blur(5px); /* Blur only the background image */
+            z-index: -1;
         }
 
         .container {
@@ -42,7 +53,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: transparent;
+            background: rgba(15, 23, 42, 0.8); /* Semi-transparent navy */
             padding: 1rem 2rem;
             z-index: 1000;
             backdrop-filter: blur(15px);
@@ -54,16 +65,24 @@
             align-items: center;
         }
 
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #06b6d4; /* Teal/cyan */
+            text-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Subtle glow */
+        }
+
         nav a {
-            color: #d1fae5;
+            color: #06b6d4; /* Teal/cyan */
             text-decoration: none;
             font-weight: 500;
             margin-left: 2rem;
             transition: color 0.3s ease;
+            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
         }
 
         nav a:hover {
-            color: #10b981;
+            color: #22d3ee; /* Lighter teal/cyan */
         }
 
         .content {
@@ -81,21 +100,33 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #10b981, #34d399);
+            background: linear-gradient(90deg, #06b6d4, #22d3ee); /* Teal/cyan gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px rgba(6, 182, 212, 0.3); /* Subtle glow */
+        }
+
+        #about h1 {
+            text-align: center; /* Center "Wie ben ik?" */
         }
 
         h2 {
             font-size: 2rem;
-            color: #10b981;
+            color: #06b6d4; /* Teal/cyan */
             margin-bottom: 1rem;
+            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
+        }
+
+        h3 {
+            color: #06b6d4; /* Teal/cyan */
+            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
         }
 
         p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
         }
 
         .code-snippet {
@@ -104,7 +135,7 @@
             border-radius: 0.5rem;
             font-family: 'Fira Code', monospace;
             font-size: 0.95rem;
-            color: #94a3b8;
+            color: #22d3ee; /* Lighter teal/cyan for code */
             margin-top: 2rem;
             position: relative;
             overflow: hidden;
@@ -117,20 +148,14 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #10b981, #34d399);
-        }
-
-        #home, #about, #products, #contact {
-            background: url('https://i.imgur.com/1HTZErG.png') center/cover no-repeat;
-            background-attachment: fixed;
-            position: relative;
+            background: linear-gradient(90deg, #06b6d4, #22d3ee); /* Teal/cyan gradient */
         }
 
         .cta-button {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: #10b981;
-            color: #0f172a;
+            background: #06b6d4; /* Teal/cyan */
+            color: #ffffff; /* White text for contrast */
             text-decoration: none;
             border-radius: 0.375rem;
             font-weight: 500;
@@ -138,16 +163,21 @@
         }
 
         .cta-button:hover {
-            background: #059669;
+            background: #0891b2; /* Darker teal/cyan */
         }
 
         .logo-placeholder {
             font-size: 2rem;
             font-weight: 700;
-            color: #10b981;
+            color: #06b6d4; /* Teal/cyan */
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
+            text-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Subtle glow */
+            background: rgba(15, 23, 42, 0.5); /* Semi-transparent background */
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            text-align: center;
         }
 
         #home .promo {
@@ -159,9 +189,9 @@
 
         #about .profile {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column; /* Stack vertically for centering */
+            align-items: center; /* Center horizontally */
             gap: 2rem;
-            align-items: center;
             justify-content: center;
         }
 
@@ -170,15 +200,19 @@
             width: 300px;
             height: 300px;
             border-radius: 0.5rem;
-            border: 2px solid #10b981;
+            border: 2px solid #06b6d4; /* Teal/cyan border */
             color: transparent;
             font-size: 0;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2); /* Teal/cyan shadow */
+            display: block;
+            margin: 0 auto; /* Center the button */
         }
 
         #about .affiche-button:hover {
             transform: scale(1.05);
+            border-color: #22d3ee; /* Lighter teal/cyan */
         }
 
         .modal {
@@ -198,14 +232,15 @@
             max-width: 90%;
             max-height: 90%;
             border-radius: 0.5rem;
+            border: 2px solid #06b6d4; /* Teal/cyan border */
         }
 
         .modal .close-button {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: #10b981;
-            color: #0f172a;
+            background: #06b6d4; /* Teal/cyan */
+            color: #ffffff; /* White text */
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 0.375rem;
@@ -215,7 +250,7 @@
         }
 
         .modal .close-button:hover {
-            background: #059669;
+            background: #0891b2; /* Darker teal/cyan */
         }
 
         #products .product-grid {
@@ -233,7 +268,7 @@
         }
 
         #products .product-card h3 {
-            color: #d1fae5;
+            color: #06b6d4; /* Teal/cyan */
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
@@ -250,13 +285,13 @@
         }
 
         #contact .contact-info a {
-            color: #10b981;
+            color: #06b6d4; /* Teal/cyan */
             text-decoration: none;
             font-size: 1.1rem;
         }
 
         #contact .contact-info a:hover {
-            text-decoration: underline;
+            color: #22d3ee; /* Lighter teal/cyan */
         }
 
         .order-form {
@@ -276,7 +311,7 @@
         .order-form label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #d1fae5;
+            color: #06b6d4; /* Teal/cyan */
         }
 
         .order-form input, .order-form select, .order-form textarea {
@@ -284,26 +319,31 @@
             padding: 0.75rem;
             margin-bottom: 1rem;
             background: #334155;
-            border: 1px solid #10b981;
+            border: 1px solid #06b6d4; /* Teal/cyan border */
             border-radius: 0.375rem;
-            color: #d1fae5;
+            color: #06b6d4; /* Teal/cyan text */
             font-size: 1rem;
+        }
+
+        .order-form input::placeholder, .order-form textarea::placeholder {
+            color: #22d3ee; /* Lighter teal/cyan for placeholders */
+            opacity: 0.8;
         }
 
         .order-form button {
             width: 100%;
             padding: 0.75rem;
-            background: #10b981;
+            background: #06b6d4; /* Teal/cyan */
             border: none;
             border-radius: 0.375rem;
-            color: #0f172a;
+            color: #ffffff; /* White text */
             font-weight: 500;
             cursor: pointer;
             transition: background 0.3s ease;
         }
 
         .order-form button:hover {
-            background: #059669;
+            background: #0891b2; /* Darker teal/cyan */
         }
     </style>
 </head>
@@ -321,10 +361,11 @@
     </nav>
 
     <section id="home">
+        <div class="background-image"></div>
         <div class="container content">
             <div class="promo">
                 <div class="logo-placeholder">ScriptForge</div>
-                <h1>Eco-vriendelijke Coding Oplossingen</h1>
+                <h1>efficient code voor eerlijke prijs!</h1>
                 <p>Jouw app, onze code</p>
                 <a href="#products" class="cta-button">Bekijk Producten</a>
             </div>
@@ -332,20 +373,21 @@
     </section>
 
     <section id="about">
+        <div class="background-image"></div>
         <div class="container content">
             <h1>Wie ben ik?</h1>
             <div class="profile">
                 <button class="affiche-button" onclick="openModal()"></button>
                 <div>
-                    <p>Ik ben Luka, de oprichter van ScriptForge, een gepassioneerde softwareontwikkelaar met een focus op ecologische en duurzame technologieën. Mijn werk combineert technische expertise met een passie voor het milieu. Ik ontwikkel gebruiksvriendelijke, efficiënte applicaties met technologieën zoals Python, Python en React, altijd met duurzaamheid in gedachten.</p>
-                    <p>Waarom? Omdat ik geloof dat technologie de wereld kan verbeteren. Mijn projecten zijn ontworpen om energie-efficiënt te zijn en een minimale ecologische voetafdruk te hebben. Naast coderen geniet ik van het delen van kennis via workshops en het verkennen van nieuwe technologieën.</p>
-                    <p>Extra: Ik organiseer lokale hackathons om jonge ontwikkelaars te inspireren en werk samen met organisaties om groene apps te ontwikkelen!</p>
+                    <p>Ik ben Luka, de oprichter van ScriptForge, een gepassioneerde softwareontwikkelaar met een focus op hoge qualiteit coden. Mijn werk combineert technische expertise met een passie.. Ik ontwikkel gebruiksvriendelijke, efficiënte applicaties met technologieën zoals Python, JavaScript en Lua.</p>
+                    <p>Waarom? Omdat ik geloof dat technologie de wereld kan verbeteren. ik sta altijd open voor verbetering als er iets mis is.</p>
+                    <p>Extra: ik python het leukste om mee te programeren</p>
                     <div class="code-snippet">
                         scriptforge = {
                             "name": "Luka",
-                            "mission": "Sustainable coding for a better planet",
-                            "skills": ["Python", "Python", "React", "Eco-friendly design"],
-                            "hobbies": ["Teaching", "Hiking", "Tech innovation"]
+                            "mission": "beter worden in coden en mensen helpen met hun projecten",
+                            "skills": ["Python", "JavaScript", "Lua"],
+                            "hobbies": ["gamen", "coden", "fietsen"]
                         }
                     </div>
                 </div>
@@ -354,26 +396,27 @@
     </section>
 
     <section id="products">
+        <div class="background-image"></div>
         <div class="container content">
             <h1>Producten</h1>
-            <p>Ontdek mijn fictieve eco-vriendelijke softwareproducten. Bestel online of bezoek mijn stand op lokale tech-evenementen!</p>
+            <p>dit zijn mijn 'fictieve' softwareproducten!</p>
             <div class="product-grid">
                 <div class="product-card">
                     <h3>Python code</h3>
-                    <p>Prijs: €49,99</p>
-                    <p>Efficiënte en duurzame Python-code voor jouw projecten.</p>
+                    <p>Prijs: €39,99</p>
+                    <p>zelfgemaakte python code.</p>
                     <a href="#order-form" class="cta-button">Bestel Nu</a>
                 </div>
                 <div class="product-card">
                     <h3>Java code</h3>
-                    <p>Prijs: €79,99</p>
-                    <p>Robuuste en milieuvriendelijke Java-oplossingen.</p>
+                    <p>Prijs: €49,99</p>
+                    <p>zelfgemaakte java code.</p>
                     <a href="#order-form" class="cta-button">Bestel Nu</a>
                 </div>
                 <div class="product-card">
                     <h3>Lua coden</h3>
-                    <p>Prijs: €99,99</p>
-                    <p>Lichtgewicht en groene Lua-code voor jouw applicaties.</p>
+                    <p>Prijs: €49,99</p>
+                    <p>zelfgemaakte lua code top qualiteit.</p>
                     <a href="#order-form" class="cta-button">Bestel Nu</a>
                 </div>
             </div>
@@ -386,22 +429,23 @@
                 <label for="product">Product</label>
                 <select id="product" required>
                     <option value="">Kies een product</option>
-                    <option value="Python code">Python code (€49,99)</option>
-                    <option value="Java code">Java code (€79,99)</option>
-                    <option value="Lua coden">Lua coden (€99,99)</option>
+                    <option value="Python code">Python code (€39,99, prijs kan verandern)</option>
+                    <option value="Java code">Java code (€49,99, prijs kan veranderen)</option>
+                    <option value="Lua coden">Lua coden (€49,99, prijs kan veranderen)</option>
                 </select>
                 <label for="message">Bericht</label>
                 <textarea id="message" rows="4" placeholder="Extra opmerkingen"></textarea>
                 <button type="button" onclick="alert('Bestelling verzonden! We nemen spoedig contact op.')">Verzend Bestelling</button>
             </div>
-            <p style="text-align: center; margin-top: 2rem;">Bestellen kan online via dit formulier of in persoon op tech-evenementen in Nederland. Volg mijn sociale media voor updates!</p>
+            <p style="text-align: center; margin-top: 2rem;">je kan hier bestellen, als er iets mis loopt stuur dan zeker een mail! prijs kan veranderen hangt van groote af.</p>
         </div>
     </section>
 
     <section id="contact">
+        <div class="background-image"></div>
         <div class="container content">
             <h1>Contact</h1>
-            <p>Vind mijn producten en neem contact op via de onderstaande kanalen. Ik kijk ernaar uit om samen te werken!</p>
+            <p>hier staan mijn producten stuur mij een mailtje als je iets anders nodig hebt</p>
             <div class="contact-info">
                 <div>
                     <h2>Sociale Media</h2>
@@ -413,7 +457,7 @@
                     <h2>Contactgegevens</h2>
                     <p>E-mail: <a href="mailto:contact@scriptforge.com">contact@scriptforge.com</a></p>
                     <p>Telefoon: +31 123 456 789</p>
-                    <p>Adres: Techstraat 1, 1234 AB, Amsterdam</p>
+                    <p>Adres: Hasselt, Kindsheidjesus school</p>
                 </div>
             </div>
         </div>
