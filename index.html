@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RASH Coding Portfolio</title>
+    <title>RASH Eco Coding</title>
     <style>
         * {
             margin: 0;
@@ -83,9 +83,15 @@
             -webkit-text-fill-color: transparent;
         }
 
+        h2 {
+            font-size: 2rem;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
         p {
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 2rem;
         }
 
@@ -111,36 +117,21 @@
             background: linear-gradient(90deg, #10b981, #34d399);
         }
 
-        #hero {
-            background: url('https://source.unsplash.com/random/1920x1080?code') center/cover no-repeat;
+        #home {
+            background: url('https://source.unsplash.com/random/1920x1080?green,tech') center/cover no-repeat;
             background-attachment: fixed;
             position: relative;
         }
 
-        #hero::before {
+        #home::before {
             content: '';
             position: absolute;
             inset: 0;
             background: rgba(15, 23, 42, 0.7);
         }
 
-        #about, #projects, #contact {
+        #about, #products, #contact {
             background: linear-gradient(135deg, rgba(15, 23, 42, 1), rgba(22, 78, 99, 0.8));
-        }
-
-        #about .content {
-            text-align: center;
-        }
-
-        #about .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        #about .profile-text {
-            max-width: 800px;
         }
 
         .cta-button {
@@ -164,6 +155,125 @@
             color: #10b981;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        #home .promo {
+            text-align: center;
+        }
+
+        #home .promo img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        #about .profile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about .profile img {
+            max-width: 300px;
+            border-radius: 0.5rem;
+            border: 2px solid #10b981;
+        }
+
+        #products .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        #products .product-card {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        #products .product-card img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #products .product-card h3 {
+            color: #d1fae5;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #products .product-card p {
+            margin-bottom: 1rem;
+        }
+
+        #contact .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        #contact .contact-info a {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        #contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .order-form {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .order-form h2 {
+            text-align: center;
+        }
+
+        .order-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #d1fae5;
+        }
+
+        .order-form input, .order-form select, .order-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            background: #334155;
+            border: 1px solid #10b981;
+            border-radius: 0.375rem;
+            color: #d1fae5;
+            font-size: 1rem;
+        }
+
+        .order-form button {
+            width: 100%;
+            padding: 0.75rem;
+            background: #10b981;
+            border: none;
+            border-radius: 0.375rem;
+            color: #0f172a;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .order-form button:hover {
+            background: #059669;
         }
     </style>
 </head>
@@ -172,65 +282,114 @@
         <div class="container">
             <div class="logo">RASH</div>
             <div>
-                <a href="#hero">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
+                <a href="#home">Homepage</a>
+                <a href="#about">Wie ben ik?</a>
+                <a href="#products">Producten</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="hero">
+    <section id="home">
         <div class="container content">
-            <h1>Building the Future with Code</h1>
-            <p>Passionate developer creating innovative solutions with modern technologies.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <div class="promo">
+                <div class="logo-placeholder">RASH</div>
+                <h1>Eco-vriendelijke Coding Oplossingen</h1>
+                <p>Ontdek mijn passie voor duurzame technologie en innovatieve software-oplossingen. Bouw mee aan een groenere toekomst!</p>
+                <img src="https://source.unsplash.com/random/800x400?green,tech" alt="Promotie affiche">
+                <a href="#products" class="cta-button">Bekijk Producten</a>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container content">
-            <h1>About RASH</h1>
+            <h1>Wie ben ik?</h1>
             <div class="profile">
-                <div class="logo-placeholder">RASH</div>
-                <div class="profile-text">
-                    <p>Hi, I'm RASH, a skilled software developer with a passion for crafting elegant and efficient code. Specializing in full-stack development, I thrive on turning complex problems into intuitive solutions. My expertise spans JavaScript, Python, and modern frameworks like React and Node.js.</p>
-                    <p>With a focus on clean code and user-centric design, I aim to build applications that are both powerful and accessible. Let's create something extraordinary together!</p>
-                </div>
-                <div class="code-snippet">
-                    const rash = {
-                        name: "RASH",
-                        expertise: ["Full-Stack Development", "Problem Solving", "UI/UX"],
-                        mission: "Crafting code that empowers and inspires"
-                    };
+                <img src="https://source.unsplash.com/random/300x300?portrait,developer" alt="Foto van RASH">
+                <div>
+                    <p>Ik ben RASH, een gedreven softwareontwikkelaar met een focus op ecologische en duurzame technologieën. Mijn werk combineert technische expertise met een passie voor het milieu. Ik ontwikkel gebruiksvriendelijke, efficiënte applicaties met technologieën zoals JavaScript, Python en React, altijd met duurzaamheid in gedachten.</p>
+                    <p>Waarom? Omdat ik geloof dat technologie de wereld kan verbeteren. Mijn projecten zijn ontworpen om energie-efficiënt te zijn en een minimale ecologische voetafdruk te hebben. Naast coderen geniet ik van het delen van kennis via workshops en het verkennen van nieuwe technologieën.</p>
+                    <p>Extra: Ik organiseer lokale hackathons om jonge ontwikkelaars te inspireren en werk samen met organisaties om groene apps te ontwikkelen!</p>
+                    <div class="code-snippet">
+                        const rash = {
+                            name: "RASH",
+                            mission: "Sustainable coding for a better planet",
+                            skills: ["JavaScript", "Python", "React", "Eco-friendly design"],
+                            hobbies: ["Teaching", "Hiking", "Tech innovation"]
+                        };
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="products">
         <div class="container content">
-            <h1>My Projects</h1>
-            <p>Explore my portfolio of cutting-edge applications and solutions.</p>
-            <div class="code-snippet">
-                class Project {
-                    constructor(name, tech) {
-                        this.name = name;
-                        this.tech = tech;
-                    }
-                    deploy() {
-                        console.log(`${this.name} is live!`);
-                    }
-                }
+            <h1>Producten</h1>
+            <p>Ontdek mijn fictieve eco-vriendelijke softwareproducten. Bestel online of bezoek mijn stand op lokale tech-evenementen!</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/300x200?app,green" alt="Eco App">
+                    <h3>Eco App</h3>
+                    <p>Prijs: €49,99</p>
+                    <p>Een app die je ecologische voetafdruk berekent en tips geeft voor een duurzamere levensstijl.</p>
+                    <a href="#order-form" class="cta-button">Bestel Nu</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/300x200?software,green" alt="Green Code Toolkit">
+                    <h3>Green Code Toolkit</h3>
+                    <p>Prijs: €79,99</p>
+                    <p>Een set tools om energie-efficiënte code te schrijven voor webapplicaties.</p>
+                    <a href="#order-form" class="cta-button">Bestel Nu</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/300x200?tech,green" alt="Smart Energy Dashboard">
+                    <h3>Smart Energy Dashboard</h3>
+                    <p>Prijs: €99,99</p>
+                    <p>Een dashboard om het energieverbruik van je applicaties te monitoren en optimaliseren.</p>
+                    <a href="#order-form" class="cta-button">Bestel Nu</a>
+                </div>
             </div>
+            <div id="order-form" class="order-form">
+                <h2>Bestelformulier</h2>
+                <label for="name">Naam</label>
+                <input type="text" id="name" placeholder="Jouw naam" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Jouw e-mail" required>
+                <label for="product">Product</label>
+                <select id="product" required>
+                    <option value="">Kies een product</option>
+                    <option value="Eco App">Eco App (€49,99)</option>
+                    <option value="Green Code Toolkit">Green Code Toolkit (€79,99)</option>
+                    <option value="Smart Energy Dashboard">Smart Energy Dashboard (€99,99)</option>
+                </select>
+                <label for="message">Bericht</label>
+                <textarea id="message" rows="4" placeholder="Extra opmerkingen"></textarea>
+                <button type="button" onclick="alert('Bestelling verzonden! We nemen spoedig contact op.')">Verzend Bestelling</button>
+            </div>
+            <p style="text-align: center; margin-top: 2rem;">Bestellen kan online via dit formulier of in persoon op tech-evenementen in Nederland. Volg mijn sociale media voor updates!</p>
         </div>
     </section>
 
     <section id="contact">
         <div class="container content">
-            <h1>Contact Me</h1>
-            <p>Let's collaborate on your next big idea.</p>
-            <a href="mailto:your.email@example.com" class="cta-button">Send a Message</a>
+            <h1>Contact</h1>
+            <p>Vind mijn producten en neem contact op via de onderstaande kanalen. Ik kijk ernaar uit om samen te werken!</p>
+            <div class="contact-info">
+                <div>
+                    <h2>Sociale Media</h2>
+                    <p><a href="https://twitter.com/rashcoding" target="_blank">Twitter: @RASHcoding</a></p>
+                    <p><a href="https://linkedin.com/in/rashcoding" target="_blank">LinkedIn: RASH Coding</a></p>
+                    <p><a href="https://instagram.com/rashcoding" target="_blank">Instagram: @RASHcoding</a></p>
+                </div>
+                <div>
+                    <h2>Contactgegevens</h2>
+                    <p>E-mail: <a href="mailto:contact@rashcoding.com">contact@rashcoding.com</a></p>
+                    <p>Telefoon: +31 123 456 789</p>
+                    <p>Adres: Techstraat 1, 1234 AB, Amsterdam</p>
+                </div>
+            </div>
         </div>
     </section>
 
