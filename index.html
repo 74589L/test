@@ -100,9 +100,7 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #39ff14, #76ff03); /* Green gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #39ff14; /* Neon green, no gradient for consistency */
             text-shadow: 0 0 5px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
@@ -126,6 +124,7 @@
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            color: #39ff14; /* Ensure neon green */
             text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
@@ -277,6 +276,16 @@
             margin-bottom: 1rem;
         }
 
+        #contact .content h1 {
+            color: #39ff14 !important; /* Ensure h1 is neon green */
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.3); /* Green glow */
+        }
+
+        #contact .content p {
+            color: #39ff14 !important; /* Ensure p is neon green */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
+        }
+
         #contact .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -284,14 +293,20 @@
             justify-content: center;
         }
 
+        #contact .contact-info h2 {
+            color: #39ff14 !important; /* Ensure h2 is neon green */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
+        }
+
         #contact .contact-info a {
-            color: #39ff14; /* Neon green */
+            color: #39ff14 !important; /* Ensure links are neon green */
             text-decoration: none;
             font-size: 1.1rem;
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         #contact .contact-info a:hover {
-            color: #76ff03; /* Lighter green */
+            color: #76ff03 !important; /* Lighter green on hover */
         }
 
         .order-form {
@@ -373,7 +388,7 @@
     </section>
 
     <section id="about">
-        <-contrib:  <div class="background-image"></div>
+        <div class="background-image"></div>
         <div class="container content">
             <h1>Over Mij</h1>
             <div class="profile">
@@ -412,7 +427,7 @@
                     <p>Prijs: €49,99</p>
                     <p>Op maat gemaakte Java-code.</p>
                     <a href="#order-form" class="cta-button">Bestel Nu</a>
-                tractor: </div>
+                </div>
                 <div class="product-card">
                     <h3>Lua-code</h3>
                     <p>Prijs: €49,99</p>
@@ -501,11 +516,11 @@
 
         // Modal functions
         function openModal() {
-            document.getElementById('afficheModal').style.display = 'flex';
+            document.getElementById('afficheModal').style.display = "flex";
         }
 
         function closeModal() {
-            document.getElementById('afficheModal').style.display = 'none';
+            document.getElementById('afficheModal').style.display = "none";
         }
     </script>
 </body>
