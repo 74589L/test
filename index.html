@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #39ff14; /* Teal/cyan default text color */
-            background: #0f172a;
+            color: #39ff14; /* All text neon green */
+            background: #0f172a; /* Dark navy background */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -53,7 +53,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(15, 23, 42, 0.8); /* Semi-transparent navy */
+            background: rgba(18, 18, 18, 0.8); /* Dark gray, semi-transparent */
             padding: 1rem 2rem;
             z-index: 1000;
             backdrop-filter: blur(15px);
@@ -68,21 +68,21 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #39ff14; /* Teal/cyan */
-            text-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Subtle glow */
+            color: #39ff14; /* Neon green */
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.5); /* Green glow */
         }
 
         nav a {
-            color: #39ff14; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
             text-decoration: none;
             font-weight: 500;
             margin-left: 2rem;
             transition: color 0.3s ease;
-            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         nav a:hover {
-            color: #22d3ee; /* Lighter teal/cyan */
+            color: #76ff03; /* Lighter green for hover */
         }
 
         .content {
@@ -100,10 +100,10 @@
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #06b6d4, #22d3ee); /* Teal/cyan gradient */
+            background: linear-gradient(90deg, #39ff14, #76ff03); /* Green gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 5px rgba(6, 182, 212, 0.3); /* Subtle glow */
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         #about h1 {
@@ -112,30 +112,30 @@
 
         h2 {
             font-size: 2rem;
-            color: #39ff14; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
             margin-bottom: 1rem;
-            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         h3 {
-            color: #39ff14; /* Teal/cyan */
-            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
+            color: #39ff14; /* Neon green */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
-            text-shadow: 0 0 3px rgba(6, 182, 212, 0.3); /* Subtle glow */
+            text-shadow: 0 0 3px rgba(57, 255, 20, 0.3); /* Green glow */
         }
 
         .code-snippet {
-            background: #1e293b;
+            background: #121212; /* Dark gray background */
             padding: 1.5rem;
             border-radius: 0.5rem;
             font-family: 'Fira Code', monospace;
             font-size: 0.95rem;
-            color: #22d3ee; /* Lighter teal/cyan for code */
+            color: #39ff14; /* Neon green for code */
             margin-top: 2rem;
             position: relative;
             overflow: hidden;
@@ -148,14 +148,14 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #06b6d4, #22d3ee); /* Teal/cyan gradient */
+            background: linear-gradient(90deg, #39ff14, #76ff03); /* Green gradient */
         }
 
         .cta-button {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: #39ff14; /* Teal/cyan */
-            color: #ffffff; /* White text for contrast */
+            background: #2e7d32; /* Dark green */
+            color: #39ff14; /* Neon green text */
             text-decoration: none;
             border-radius: 0.375rem;
             font-weight: 500;
@@ -163,18 +163,18 @@
         }
 
         .cta-button:hover {
-            background: #0891b2; /* Darker teal/cyan */
+            background: #1b5e20; /* Darker green */
         }
 
         .logo-placeholder {
             font-size: 2rem;
             font-weight: 700;
-            color: #39ff14; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
-            text-shadow: 0 0 5px rgba(6, 182, 212, 0.5); /* Subtle glow */
-            background: rgba(15, 23, 42, 0.5); /* Semi-transparent background */
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.5); /* Green glow */
+            background: rgba(18, 18, 18, 0.5); /* Semi-transparent dark gray */
             padding: 0.5rem;
             border-radius: 0.25rem;
             text-align: center;
@@ -200,19 +200,19 @@
             width: 300px;
             height: 300px;
             border-radius: 0.5rem;
-            border: 2px solid #39ff14; /* Teal/cyan border */
+            border: 2px solid #39ff14; /* Neon green border */
             color: transparent;
             font-size: 0;
             cursor: pointer;
             transition: transform 0.3s ease, border-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2); /* Teal/cyan shadow */
+            box-shadow: 0 4px 15px rgba(57, 255, 20, 0.2); /* Green shadow */
             display: block;
             margin: 0 auto; /* Center the button */
         }
 
         #about .affiche-button:hover {
             transform: scale(1.05);
-            border-color: #22d3ee; /* Lighter teal/cyan */
+            border-color: #76ff03; /* Lighter green */
         }
 
         .modal {
@@ -222,7 +222,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(18, 18, 18, 0.95); /* Dark gray */
             z-index: 2000;
             justify-content: center;
             align-items: center;
@@ -232,15 +232,15 @@
             max-width: 90%;
             max-height: 90%;
             border-radius: 0.5rem;
-            border: 2px solid #06b6d4; /* Teal/cyan border */
+            border: 2px solid #39ff14; /* Neon green border */
         }
 
         .modal .close-button {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: #06b6d4; /* Teal/cyan */
-            color: #ffffff; /* White text */
+            background: #2e7d32; /* Dark green */
+            color: #39ff14; /* Neon green text */
             border: none;
             padding: 0.5rem 1rem;
             border-radius: 0.375rem;
@@ -250,7 +250,7 @@
         }
 
         .modal .close-button:hover {
-            background: #0891b2; /* Darker teal/cyan */
+            background: #1b5e20; /* Darker green */
         }
 
         #products .product-grid {
@@ -261,14 +261,14 @@
         }
 
         #products .product-card {
-            background: #1e293b;
+            background: #121212; /* Dark gray */
             padding: 1.5rem;
             border-radius: 0.5rem;
             text-align: center;
         }
 
         #products .product-card h3 {
-            color: #06b6d4; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
@@ -285,17 +285,17 @@
         }
 
         #contact .contact-info a {
-            color: #06b6d4; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
             text-decoration: none;
             font-size: 1.1rem;
         }
 
         #contact .contact-info a:hover {
-            color: #22d3ee; /* Lighter teal/cyan */
+            color: #76ff03; /* Lighter green */
         }
 
         .order-form {
-            background: #1e293b;
+            background: #121212; /* Dark gray */
             padding: 2rem;
             border-radius: 0.5rem;
             margin-top: 2rem;
@@ -311,39 +311,39 @@
         .order-form label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #06b6d4; /* Teal/cyan */
+            color: #39ff14; /* Neon green */
         }
 
         .order-form input, .order-form select, .order-form textarea {
             width: 100%;
             padding: 0.75rem;
             margin-bottom: 1rem;
-            background: #334155;
-            border: 1px solid #06b6d4; /* Teal/cyan border */
+            background: #1e1e1e; /* Slightly lighter dark gray */
+            border: 1px solid #39ff14; /* Neon green border */
             border-radius: 0.375rem;
-            color: #06b6d4; /* Teal/cyan text */
+            color: #39ff14; /* Neon green text */
             font-size: 1rem;
         }
 
         .order-form input::placeholder, .order-form textarea::placeholder {
-            color: #22d3ee; /* Lighter teal/cyan for placeholders */
+            color: #76ff03; /* Lighter green for placeholders */
             opacity: 0.8;
         }
 
         .order-form button {
             width: 100%;
             padding: 0.75rem;
-            background: #06b6d4; /* Teal/cyan */
+            background: #2e7d32; /* Dark green */
             border: none;
             border-radius: 0.375rem;
-            color: #ffffff; /* White text */
+            color: #39ff14; /* Neon green text */
             font-weight: 500;
             cursor: pointer;
             transition: background 0.3s ease;
         }
 
         .order-form button:hover {
-            background: #0891b2; /* Darker teal/cyan */
+            background: #1b5e20; /* Darker green */
         }
     </style>
 </head>
@@ -373,7 +373,7 @@
     </section>
 
     <section id="about">
-        <div class="background-image"></div>
+        <-contrib:  <div class="background-image"></div>
         <div class="container content">
             <h1>Over Mij</h1>
             <div class="profile">
@@ -384,10 +384,10 @@
                     <p>Fun fact: Python is mijn favoriete programmeertaal!</p>
                     <div class="code-snippet">
                         scriptforge = {<br>
-                            &nbsp;&nbsp;"name": "Luka",<br>
-                            &nbsp;&nbsp;"mission": "Beter worden in coderen en mensen helpen met hun projecten",<br>
-                            &nbsp;&nbsp;"skills": ["Python", "JavaScript", "Lua"],<br>
-                            &nbsp;&nbsp;"hobbies": ["Gamen", "Coderen", "Fietsen"]<br>
+                              "name": "Luka",<br>
+                              "mission": "Beter worden in coderen en mensen helpen met hun projecten",<br>
+                              "skills": ["Python", "JavaScript", "Lua"],<br>
+                              "hobbies": ["Gamen", "Coderen", "Fietsen"]<br>
                         }
                     </div>
                 </div>
@@ -412,7 +412,7 @@
                     <p>Prijs: €49,99</p>
                     <p>Op maat gemaakte Java-code.</p>
                     <a href="#order-form" class="cta-button">Bestel Nu</a>
-                </div>
+                tractor: </div>
                 <div class="product-card">
                     <h3>Lua-code</h3>
                     <p>Prijs: €49,99</p>
@@ -462,7 +462,6 @@
             </div>
         </div>
     </section>
-
 
     <div id="afficheModal" class="modal">
         <img src="https://i.imgur.com/2w0tlbj.png" alt="Affiche">
